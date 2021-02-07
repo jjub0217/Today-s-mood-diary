@@ -1,27 +1,37 @@
-
 .main {
-    background:  url("../images/paper_445117.jpg");
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    margin-top: 100px;
-    color: bisque;
-    // margin: 20px;
-    &__title {
-        font-size: 50px;
-        font-weight: 600;
-        margin-bottom: 40px;
-    }
-    &__subtitle,
-    &__date {
-        font-size: 30px;
-        margin-bottom: 40px;
-    }
-    a {
-        font-size: 40px;
-    }
+  background: url("../images/paper_445117.jpg");
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: bisque;
+
+  &__title {
+    animation: fadein 1s ease-in-out;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  &__subtitle,
+  &__date {
+    animation: fadein 2s ease-in-out;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  a {
+    animation: fadein 4s ease-in-out;
+    font-size: 40px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
