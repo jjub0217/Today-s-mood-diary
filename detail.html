@@ -7,11 +7,41 @@
   </head>
   <body>
     <header>
-      <span class="date"></span>
-      <img src="" alt="">
+      <time class="date">
+        <span class="year"></span>
+        <span class="month"></span>
+        <span class="date"></span>
+      </time>
+
+      <img src="./images/weather/cloudy.png" alt="" />
+
+      <div class="filter">
+        <img src="./images/search.png" alt="search" />
+        <select name="조건 검색" class="select-option">
+          <option value="title">제목</option>
+          <option value="contents">내용</option>
+          <option value="feeling">기분</option>
+          <option value="tag">태그</option>
+        </select>
+      </div>
     </header>
 
-    <main></main>
+    <main>
+      <ul class="board-list">
+        <a href="#">
+          <li class="list">
+            <time>
+              <p class="day"></p>
+              <p class="date"></p>
+            </time>
+            <h1 class="title">마우스를 샀다.</h1>
+            <span class="tag"># 좋은</span>
+            <span class="tag"># 신상</span>
+            <img src="./images/feeling/good-regular.png" alt="feeling">
+          </li>
+        </a>
+      </ul>
+    </main>
 
     <nav></nav>
   </body>
