@@ -1,11 +1,14 @@
 {
     "version": 3,
+
     "mappings": "ACEA,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,MAAM;EACxB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;CAChB;;AAED,AAAA,KAAK,CAAA;EACD,OAAO,EAAE,MAAM;CAClB;;AAED,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,IAAI;CACd;;AAGD,AAAA,WAAW,CAAA;EACP,YAAY,EAAE,CAAC;EACf,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,IAAI;CACnB;;AAID,AAAA,WAAW,GAAG,CAAC,CAAA;EACX,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,IAAI;CAEtB;;AAQD,AAAA,KAAK,CAAA;EACD,gBAAgB,EAAE,UAAU;EAC5B,MAAM,EAAE,SAAS;CAEpB;;AE9CD,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAMD,AAAA,EAAE,CAAA;EACE,SAAS,EAAE,IAAI;EACf,IAAI,EAAE,OAAO;CAChB",
     "sources": [
         "../Sass/index.scss",
         "../Sass/detail/_detail.scss",
         "../Sass/detail/_detail-variable.scss",
-        "../Sass/base/_base.scss"
+        "../Sass/base/_base.scss" 
+        "../Sass/_main.scss",
+        "../Sass/_face.scss"
     ],
     "names": [],
     "file": "index.css"
