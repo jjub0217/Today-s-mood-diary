@@ -26,10 +26,9 @@ body{
 
 // 헤더
 header {
-    width: 100%;
-
     @include flexElement(flex, space-between, center);
-
+    
+    width: 100%;
     border-bottom: 1px solid;
 }
 
@@ -37,6 +36,7 @@ header {
 .time {
 
     @include MP(30px, _ , 15px 0);
+    
     font-size: 20px;
 }
 
