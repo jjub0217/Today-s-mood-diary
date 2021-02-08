@@ -21,13 +21,28 @@ header {
   margin-top: 20px;
 }
 
+.list-date {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  display: inline-block;
+}
+
+.list-date > .day {
+  border-bottom: 1px solid;
+}
+
 .board-list > a {
   display: block;
-  width: 100%;
   height: 100%;
   text-decoration: none;
   color: black;
-  margin-bottom: 20px;
+  margin: 0 20px 20px 20px;
+}
+
+.list-title {
+  background-color: red;
+  font-size: 20px;
+  display: inline;
 }
 
 .list {
