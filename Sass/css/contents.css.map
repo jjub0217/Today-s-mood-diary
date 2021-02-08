@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../contents/contents.scss"
-    ],
-    "names": [],
-    "file": "contents.css"
-}
