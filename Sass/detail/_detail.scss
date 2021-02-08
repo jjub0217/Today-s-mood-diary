@@ -1,47 +1,208 @@
-
-
-header{
-    background-color: salmon;
-    width: 100%;
-    display: flex;
+@mixin flexElement($flex, $jsCon, $alItem) {
+    display: $flex;
+    justify-content: $jsCon;
+    align-items: $alItem;
 }
 
-.time{
+@mixin MP ($m, $p) {
+    margin: $m;
+    padding: $p
+}
+
+@mixin MWH($m, $w, $h) {
+    margin: $m;
+    width: $w;
+    height: $h;
+}
+
+
+// 숨긴 컨텐츠
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+// 공통
+.icon {
     display: inline;
 }
 
-.icon{
-    width: 60px;
-}
 
-// ul
-.board-list{
-    padding-left: 0;
-    list-style: none;
+
+body {
     margin: 0;
-    margin-top: 20px;
+    box-sizing: border-box;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
 
-// ul > a
-.board-list > a{
-    display: block;
+// 헤더
+header {
+    @include flexElement(flex, space-between, center);
+
+    background-color: violet;
     width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 20px;
+    height: 7%;
+    border-bottom: 1px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .time {
+        @include MP(0 0 0 30px, 15px 0);
+
+        font-size: 23px;
+    }
+
+    .header-right {
+        @include flexElement(flex, center, center);
+        margin-right: 30px;
+
+        [alt=weather] {
+            @include MWH(_, 35px, 100%);
+        }
+
+        .filter {
+            @include flexElement(flex, center, center);
+
+            [alt=search] {
+                @include MWH(0 7px 0 30px, 20px, _);
+            }
+
+            .select-option {
+                @include MP(0 10px 0 0, 3px);
+                font-size: 16px;
+            }
+
+            .search {
+                padding: 4px;
+            }
+        }
+
+    }
+}
+
+
+// 메인
+main {
+    @include flexElement(flex, center, center);
+    flex-direction: column;
     
+    // ul
+    .board-list {
+        
+        @include MP(80px 0 0 0, 0 30px);
+
+        // ul > a
+        &>a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 0 30px 30px 30px;
+
+            // li
+            .list {
+                @include flexElement(flex, _, _);
+
+                border: 1px solid;
+                list-style: none;
+
+                // li > date 
+                .list-date {
+                    width: 9%;
+                    font-size: 20px; // 1em : 20px
+                    border-right: 1px solid;
+                    text-align: center;
+
+                    &>.day {
+                        margin: 0;
+                        border-bottom: 1px solid;
+                        background-color: #eee;
+                        text-align: center;
+                        line-height: 2;
+                    }
+                }
+
+                .contents {
+                    @include flexElement(flex, space-between, center);
+                    width: 100%;
+
+                    .text {
+                        margin-left: 40px;
+
+                        // h2
+                        .list-title {
+                            @include MWH(10px 0, 500px, _);
+
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+
+                    [alt=feeling] {
+                        @include MWH(0 40px 0 0, 6%, 60%);
+                    }
+
+                }
+            }
+
+        }
+    }
 }
 
-.board-list > .list > .title {
-    // font-size: 400px;
-    // font-size: 3rem
-}
 
-// li
-.list{
-    background-color: sandybrown;
+.more {
+
+    @include MWH(10px 0 0 0, 160px, 70px);
+    font-size: 18px;
     border: 1px solid;
-
+    border-radius: 50%;
+    margin-bottom: 100px;
+    cursor: pointer;
 }
+
+
+.navigation{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: violet;
+    // margin-top: 1000px;
+}
+// ul
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    // background-color: violet;
+
+    li{
+        // background-color: red;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        .nav-icon{
+            width: 20%;
+            height: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+
