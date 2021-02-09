@@ -46,7 +46,7 @@ body {
 }
 
 // 헤더
-header {
+.detail-header {
     @include flexElement(flex, space-between, center);
 
     background-color: violet;
