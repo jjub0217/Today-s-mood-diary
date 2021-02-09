@@ -1,53 +1,43 @@
-
-// 숨긴 컨텐츠
-.a11y-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    margin: -1px;
-    clip-path: polygon(0 0, 0 0, 0 0);
-}
-
-
-
-
-.contents-container{
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// 컨테이너
+.contents-container {
+    margin: 0 auto;
+    width: 1200px;
     height: 100vh;
+    background-color: lawngreen;
 }
 
-.navigation{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: violet;
-    // margin-top: 1000px;
+
+.contents-header {
+    margin-top: 30px;
+    background-color: lightcoral;
 }
-// ul
-.nav-list {
+
+.contents-time_feeling {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    // background-color: violet;
-
-    li{
-        // background-color: red;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-
-        .nav-icon{
-            width: 20%;
-            height: 50%;
-            cursor: pointer;
-        }
-    }
+    font-size: 50px;
 }
+
+.contents-day::after,
+.contents-date::after {
+    content: " /";
+}
+
+.contents-icon {
+    margin: 0;
+    margin-bottom: -10px;
+    width: 4.5%;
+    margin-left: 40px;
+}
+
+.contents-header::after {
+    content: "";
+    display: block;
+    width: 590px;
+    background-color: #000;
+    height: 2px;
+    margin-left: 310px;
+    margin-top: 10px;
+}
+
