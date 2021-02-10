@@ -97,4 +97,70 @@
   text-align: center;
   font-size: 30px;
 }
+
+.calendar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calendar-header .year-month {
+  margin-right: 20px;
+}
+
+.calendar-main {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calendar-main .days {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.calendar-main .days .day {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.calendar-main .dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.calendar-main .dates-box {
+  margin-top: 5px;
+  padding: 5px 8px;
+  border: 1px solid black;
+}
+
+.calendar-main .dates-day {
+  font-size: 20px;
+}
+
+.calendar-main .dates img {
+  height: 20px;
+}
 /*# sourceMappingURL=index2.css.map */
