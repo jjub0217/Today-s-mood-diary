@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   </head>
 
   <body>
@@ -37,9 +38,18 @@
       <main class="write-main">
 
         <div class="write-inner">
+
+            <div class="write-btn">
+                <button class="close">
+                    <i class="fas fa-times close"></i>
+                </button>
+                <button class="create">
+                    <i class="fas fa-check check"></i>
+                </button>
+            </div>
             <div class="write-title">
                 <label for="">Title</label>
-                <input type="text"/>
+                <input type="text" class="writeTitle"/>
             </div>
     
     
@@ -54,6 +64,38 @@
         </div>
 
       </main>
+
+      <div class="navigation">
+        <h2 class="a11y-hidden">메인메뉴</h2>
+        <ul class="nav-list">
+  
+          <li>
+  
+            <a href="">
+              <img src="./images/list-alt-regular.png" alt="lists" class="nav-icon" />
+            </a>
+          </li>
+  
+          <li>
+            <a href="">
+              <img src="./images/edit-regular.png" alt="write" class="nav-icon" />
+            </a>
+          </li>
+  
+          <li>
+            <a href="">
+              <img src="./images/feeling/good-regular.png" alt="feeling-calendar" class="nav-icon" />
+            </a>
+          </li>
+    
+          <li>
+            <a href="">
+              <img src="./images/notice-regular.png" alt="notice" class="nav-icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+  
     </div>
   </body>
 </html>

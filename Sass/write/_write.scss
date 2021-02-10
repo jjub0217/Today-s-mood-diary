@@ -51,7 +51,7 @@
     margin-top: 300px;
     margin-bottom: 150px;
     width: 1200px;
-    height: 60rem;
+    height: 70rem;
     background-color: rgb(250, 249, 249);
     border-radius: 70px;
 
@@ -68,11 +68,31 @@
     // background-color: saddlebrown;
 }
 
+.write-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 40px;    
+
+    button {
+    border: none;
+    color: #aaa;
+    background-color: transparent;
+    // font-size: 30px;
+    font-size: 2em;
+
+    }
+
+}
+  
+
+
 .write-title{
     margin-top: 2em;
+    margin-bottom: 3em;
     font-size: 25px;
 
-    input {
+    .writeTitle {
         border: none;
         background-color: transparent;
         border-bottom: 1px solid;
@@ -101,6 +121,6 @@
 
 .write-tag{
     // background-color: cornflowerblue;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     font-size: 25px;
 }

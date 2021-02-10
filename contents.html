@@ -12,28 +12,75 @@
 
   <div class="contents-container">
 
-    <header class="contents-header">
-      <div class="contents-time_feeling">
-        <span class="day contents-day">TUE</span>
-        <span class="month contents-Month">Feb</span>
-        <span class="date contents-date">06</span>
-        <span class="year contents-year">2020</span>
-        <img src="./images/feeling/good-regular.png" alt="feeling" class="icon contents-icon" />
+    <header class="write-header">
+      <div class="time">
+        <span class="year">2020</span>
+        <span class="month">07</span>
+        <span class="date">06</span>
+      </div>
+
+      <!-- <h1>LIST</h1> -->
+
+      <div class="header-right">
+        <img src="./images/weather/cloudy.png" alt="weather" class="icon" />
+
+        <div class="filter">
+          <img src="./images/search.png" alt="search" class="icon" />
+          <select name="조건 검색" class="select-option">
+            <option value="title">제목</option>
+            <option value="contents">내용</option>
+            <option value="feeling">기분</option>
+            <option value="tag">태그</option>
+          </select>
+          <input type="text" class="search" />
+        </div>
       </div>
     </header>
 
-    <main class="contents-maine"> 
-      <label for="">제목</label>
-      <input type="text" class="contents-title">
-      <label for="">내용</label>
-      <textarea name="contents" id="texr" cols="30" rows="10">
 
-      </textarea>
-      <label for="">태그</label>
-      <input type="text" class="contents-tag">
-      <button class="modify">수정</button>
-      <button class="delte">삭제</button>
+
+    <main class="content-main">
+
+      <div class="content-inner">
+
+        <div class="contents-time_feeling">
+          <span class="day contents-day">TUE</span>
+          <span class="month contents-Month">&nbsp;Feb</span>
+          <span class="date contents-date"> &nbsp;06</span>
+          <span class="year contents-year">&nbsp;2020</span>
+          <img src="./images/feeling/good-regular.png" alt="feeling" class="icon contents-icon" />
+        </div>
+
+
+        <div class="content">
+
+          <div class="content-title">
+            <label for="">Title</label>
+            <input type="text" class="contentTitle"/>
+          </div>
+
+
+          <div class="dairy">
+            <label for="" class="a11y-hidden">내용</label>            
+          </div>
+
+
+          <div class="write-tag">
+            <label for="">tag</label>
+            <input type="text"/>
+        </div>
+
+        </div>
+
+
+        <div class="content-btn">
+          <button class="modify">modify</button>
+          <button class="delte">delete</button>
+        </div>
+      </div>
+
     </main>
+
 
     <div class="navigation">
       <h2 class="a11y-hidden">메인메뉴</h2>
