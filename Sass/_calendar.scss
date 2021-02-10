@@ -25,6 +25,13 @@
     .day {
       font-weight: 600;
       padding: 10px;
+
+      &:first-child {
+        color: red;
+      }
+      &:last-child {
+        color: blue;
+      }
     }
   }
 
@@ -36,6 +43,12 @@
     &-line {
       display: flex;
       justify-content: space-around;
+      .dates-box:first-child {
+        color: red;
+      }
+      .dates-box:last-child {
+        color: blue;
+      }
     }
 
     &-box {
@@ -44,8 +57,6 @@
       align-items: center;
       margin-top: 5px;
       padding: 5px 8px;
-      // border: 1px solid black;
-      // position: relative;
     }
 
     &-day {

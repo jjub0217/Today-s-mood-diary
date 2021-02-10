@@ -141,6 +141,14 @@
   padding: 10px;
 }
 
+.calendar-main .days .day:first-child {
+  color: red;
+}
+
+.calendar-main .days .day:last-child {
+  color: blue;
+}
+
 .calendar-main .dates {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,6 +168,14 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.calendar-main .dates-line .dates-box:first-child {
+  color: red;
+}
+
+.calendar-main .dates-line .dates-box:last-child {
+  color: blue;
 }
 
 .calendar-main .dates-box {
