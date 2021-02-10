@@ -105,10 +105,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.calendar-header .year-month {
-  margin-right: 20px;
+.calendar-header span {
+  font-weight: 600;
 }
 
 .calendar-main {
@@ -126,7 +129,7 @@
           justify-content: center;
 }
 
-.calendar-main .days {
+.calendar-main__days {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: -webkit-box;
@@ -136,20 +139,20 @@
       justify-content: space-around;
 }
 
-.calendar-main .days .day {
+.calendar-main__days .day {
   font-weight: 600;
   padding: 10px;
 }
 
-.calendar-main .days .day:first-child {
+.calendar-main__days .day:first-child {
   color: red;
 }
 
-.calendar-main .days .day:last-child {
+.calendar-main__days .day:last-child {
   color: blue;
 }
 
-.calendar-main .dates {
+.calendar-main__dates {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +165,7 @@
           justify-content: center;
 }
 
-.calendar-main .dates-line {
+.calendar-main__dates .dates-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,15 +173,15 @@
       justify-content: space-around;
 }
 
-.calendar-main .dates-line .dates-box:first-child {
+.calendar-main__dates .dates-line .dates-box:first-child {
   color: red;
 }
 
-.calendar-main .dates-line .dates-box:last-child {
+.calendar-main__dates .dates-line .dates-box:last-child {
   color: blue;
 }
 
-.calendar-main .dates-box {
+.calendar-main__dates .dates-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,11 +196,11 @@
   padding: 5px 8px;
 }
 
-.calendar-main .dates-day {
+.calendar-main__dates .dates-day {
   font-size: 20px;
 }
 
-.calendar-main .dates img {
+.calendar-main__dates img {
   height: 20px;
 }
 /*# sourceMappingURL=index2.css.map */

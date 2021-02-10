@@ -1,22 +1,21 @@
 .calendar-header {
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  .year-month {
-    margin-right: 20px;
+  span {
+    font-weight: 600;
   }
 }
 
 .calendar-main {
   padding: 10px;
   margin-top: 30px;
-  //   height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //   align-items: center;
 
-  .days {
+  &__days {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     display: flex;
@@ -35,12 +34,12 @@
     }
   }
 
-  .dates {
+  &__dates {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    &-line {
+    .dates-line {
       display: flex;
       justify-content: space-around;
       .dates-box:first-child {
@@ -51,7 +50,7 @@
       }
     }
 
-    &-box {
+    .dates-box {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -59,7 +58,7 @@
       padding: 5px 8px;
     }
 
-    &-day {
+    .dates-day {
       font-size: 20px;
     }
     img {

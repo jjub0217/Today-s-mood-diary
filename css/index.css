@@ -278,14 +278,11 @@ body {
   width: 20%;
 }
 
-<<<<<<< HEAD
-=======
 .contents-container {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d5d5d3), color-stop(0%, #b0f2b7), to(#64d4e0));
   background: linear-gradient(#d5d5d3 50%, #b0f2b7 0%, #64d4e0 100% 50%);
 }
 
->>>>>>> develop
 .write-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,14 +455,11 @@ body {
   color: #424141;
   border: none;
   border-radius: 25px;
-<<<<<<< HEAD
-=======
 }
 
 .write-container {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d5d5d3), color-stop(0%, #b0f2b7), to(#64d4e0));
   background: linear-gradient(#d5d5d3 50%, #b0f2b7 0%, #64d4e0 100% 50%);
->>>>>>> develop
 }
 
 .write-header {
