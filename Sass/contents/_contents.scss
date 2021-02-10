@@ -20,7 +20,7 @@
         @include flexElement(flex, center, center);
         padding: 20px 0 0 0 ;
         margin-right: 30px;
-
+  
         [alt=weather] {
             @include MWH(_, 35px, 100%);
         }
