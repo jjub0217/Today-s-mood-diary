@@ -1,22 +1,34 @@
 {
-    "itmes": [
+    "items": [
         {
-            "date": "Thursday, December 20, 2020",
             "title": "일기를 써보앗다",
             "content": "내용이다...",
+            "id": 1,
+            "year": 2021,
+            "month": 2,
+            "date":  12,
+            "day": "Thursday",
             "tags": ["카페", "아아", "얼죽아"]
         },
         {
-            "date": "Thursday, December 21, 2020",
-            "title": "일기를 써보앗다2",
-            "content": "내용이다...2",
-            "tags": ["2", "3", "5"]
+            "title": "일기를 써보앗다",
+            "content": "내용이다...",
+            "id": 1,
+            "year": 2021,
+            "month": 2,
+            "date":  12,
+            "day": "Thursday",
+            "tags": ["카페", "아아", "얼죽아"]
         },
         {
-            "date": "Thursday, December 22, 2020",
-            "title": "일기를 써보앗다3",
-            "content": "내용이다...3",
-            "tags": ["11", "12", "67"]
+            "title": "일기를 써보앗다",
+            "content": "내용이다...",
+            "id": 1,
+            "year": 2021,
+            "month": 2,
+            "date":  12,
+            "day": "Thursday",
+            "tags": ["카페", "아아", "얼죽아"]
         }
     ]
 }
