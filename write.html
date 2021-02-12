@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Write</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="./js/write.js" defer></script>
   </head>
 
   <body>
@@ -40,9 +41,10 @@
         <div class="write-inner">
 
             <div class="write-btn">
-                <button class="close">
+
+                  <a href="./detail.html">
                     <i class="fas fa-times close"></i>
-                </button>
+                  </a>
                 <button class="create">
                     <i class="fas fa-check check"></i>
                 </button>
@@ -55,11 +57,17 @@
     
             <label for="" class="a11y-hidden">내용</label>
             <textarea name="contents" 
-            id="texr" cols="30" rows="10" placeholder="Please write your content.">Please write your content </textarea>
+            id="text" cols="30" rows="10" placeholder="Please write your content." maxlength="1000"></textarea>
             
             <div class="write-tag">
-                <label for="">tag</label>
+                <label for="" class="a11y-hidden">tag</label>
+                <input type="text" class="inputTag" value="" placeholder="# tag"/ >
+                <!-- <input type="text" placeholder="# tag"/ > -->
+
+                <!-- <input type="text"/>
                 <input type="text"/>
+                <input type="text"/>
+                <input type="text"/> -->
             </div>
         </div>
 
@@ -89,8 +97,8 @@
           </li>
     
           <li>
-            <a href="">
-              <img src="./images/notice-regular.png" alt="notice" class="nav-icon" />
+            <a href="#">
+              <img src="./images/corperation-info-regular.png" alt="info" class="nav-icon" />
             </a>
           </li>
         </ul>
