@@ -13,13 +13,17 @@ function saveFaceInfo(face) {
         created: created
     };
     
-    if(!result.has(created)) {
-        result.set(created, faceInfo);
-        for (r of resultArr) {
-            console.log(r);
-            resultArr.push(result.get(created));
-            localStorage.setItem(`face`, JSON.stringify(resultArr));
-        }
+    result.set(created, faceInfo);
+    
+    if (resultArr.length === 0) {
+        resultArr.push(result.get(created));
+        localStorage.setItem(`face`, JSON.stringify(resultArr));
+        return ;
+    }
+    for (r of resultArr) {
+        console.log(r);
+        resultArr.push(result.get(created));
+        localStorage.setItem(`face`, JSON.stringify(resultArr));
     }
     
 }
