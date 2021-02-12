@@ -193,7 +193,7 @@
   width: 13%;
   height: 66%;
   margin-top: -6px;
-  background-image: url("/images/clock-solid.png");
+  background-image: url("../images/clock-solid.png");
   background-size: contain;
   vertical-align: middle;
   margin-right: 15px;
