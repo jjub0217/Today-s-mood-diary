@@ -97,4 +97,110 @@
   text-align: center;
   font-size: 30px;
 }
+
+.calendar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar-header span {
+  font-weight: 600;
+}
+
+.calendar-main {
+  padding: 10px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calendar-main__days {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.calendar-main__days .day {
+  font-weight: 600;
+  padding: 10px;
+}
+
+.calendar-main__days .day:first-child {
+  color: red;
+}
+
+.calendar-main__days .day:last-child {
+  color: blue;
+}
+
+.calendar-main__dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calendar-main__dates .dates-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.calendar-main__dates .dates-line .dates-box:first-child {
+  color: red;
+}
+
+.calendar-main__dates .dates-line .dates-box:last-child {
+  color: blue;
+}
+
+.calendar-main__dates .dates-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  padding: 5px 8px;
+}
+
+.calendar-main__dates .dates-day {
+  font-size: 20px;
+}
+
+.calendar-main__dates img {
+  height: 20px;
+}
 /*# sourceMappingURL=index2.css.map */
