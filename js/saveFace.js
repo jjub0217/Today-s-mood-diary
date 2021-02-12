@@ -1,18 +1,27 @@
 const faces = document.querySelectorAll('input[type="radio"]');
 const faceArray = [...faces];
 let result = new Map();
+let resultArr = [];
 
 function saveFaceInfo(face) {
     const faceId = face.id;
-    const created = getTime();
+    // const created = getTime();
+    const created = '2021-02-14';
     // json에 저장 시킨다. 날자. 감정정보
     const faceInfo = {
         id: faceId,
         created: created
     };
-    result.set(created, faceInfo);
-
-    localStorage.setItem(`face`, JSON.stringify(result.get(created)));
+    
+    if(!result.has(created)) {
+        result.set(created, faceInfo);
+        for (r of resultArr) {
+            console.log(r);
+            resultArr.push(result.get(created));
+            localStorage.setItem(`face`, JSON.stringify(resultArr));
+        }
+    }
+    
 }
 
 function getTime() {
