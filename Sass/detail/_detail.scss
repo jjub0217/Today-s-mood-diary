@@ -33,12 +33,6 @@
 
 
 
-body {
-    margin: 0;
-    box-sizing: border-box;
-    background-color: #d5d5d3;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -94,6 +88,7 @@ body {
 
     }
 }
+
 
 
 // main
@@ -243,6 +238,7 @@ body {
     border-radius: 30px;
     // background-color: transparent;
 }
+
 
 .navigation{
     margin: 0 auto;

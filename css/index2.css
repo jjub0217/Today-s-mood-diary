@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
 .main {
   background: url("../images/paper_445117.jpg");
   display: -webkit-box;
@@ -65,7 +66,8 @@
 }
 
 [type="radio"]:checked + img {
-  outline: 2px solid blueviolet;
+  border: 10px solid blueviolet;
+  border-radius: 50%;
 }
 
 .face-container {
@@ -215,5 +217,12 @@
 
 .calendar-main__dates img {
   height: 20px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=index2.css.map */

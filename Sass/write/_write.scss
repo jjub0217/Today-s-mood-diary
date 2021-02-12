@@ -1,5 +1,7 @@
 
+
 .write-container {
+
     background: linear-gradient( #d5d5d3 50%, rgba(176, 242, 183, 1) 0%, rgba(100, 212, 224, 1) 100% 50%);
 }
 
@@ -103,6 +105,7 @@
 }
 
 .write-inner>textarea {
+    font-weight: 100;
     border: none;
     background-color: transparent;
     height: 50%;

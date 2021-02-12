@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap");
 .a11y-hidden {
   position: absolute;
   width: 1px;
@@ -10,13 +11,6 @@
 
 .icon {
   display: inline;
-}
-
-body {
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #d5d5d3;
 }
 
 .container {
@@ -595,6 +589,7 @@ body {
 }
 
 .write-inner > textarea {
+  font-weight: 100;
   border: none;
   background-color: transparent;
   height: 50%;
@@ -606,5 +601,13 @@ body {
 .write-tag {
   margin-bottom: 80px;
   font-size: 25px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #d5d5d3;
 }
 /*# sourceMappingURL=index.css.map */
