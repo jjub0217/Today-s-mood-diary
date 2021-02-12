@@ -1,0 +1,118 @@
+
+.write-container {
+    background: linear-gradient( #d5d5d3 50%, rgba(176, 242, 183, 1) 0%, rgba(100, 212, 224, 1) 100% 50%);
+}
+
+
+
+.write-header {
+    @include flexElement(flex, space-between, flex-start);
+    @include MWH(_, 100%, 25%);
+    padding: 20px 0 0 0;
+
+
+    background-color: #D5D5D3;
+    font-size: 23px;
+
+    .time {
+        @include MP(0 0 0 30px, 15px 0);
+    }
+
+    .header-right {
+        @include flexElement(flex, center, center);
+        padding: 20px 0 0 0;
+        margin-right: 30px;
+
+        [alt=weather] {
+            @include MWH(_, 35px, 100%);
+        }
+
+        .filter {
+            @include flexElement(flex, center, center);
+
+            [alt=search] {
+                @include MWH(0 7px 0 30px, 20px, _);
+            }
+
+            .select-option {
+                @include MP(0 10px 0 0, 3px);
+                font-size: 16px;
+            }
+
+            .search {
+                padding: 4px;
+            }
+        }
+
+    }
+}
+
+.write-main {
+    margin: 0 auto;
+    margin-top: 300px;
+    margin-bottom: 150px;
+    width: 1200px;
+    height: 70rem;
+    background-color: rgb(250, 249, 249);
+    border-radius: 70px;
+
+    display: flex;
+}
+
+.write-inner {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60em;
+}
+
+.write-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+    button {
+        border: none;
+        color: #aaa;
+        background-color: transparent;
+        font-size: 2em;
+
+    }
+
+}
+
+
+
+.write-title {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    font-size: 25px;
+
+    .writeTitle {
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid;
+        outline: none;
+        font-size: 20px;
+        padding: 5px;
+
+        margin-left: 15px;
+    }
+}
+
+.write-inner>textarea {
+    border: none;
+    background-color: transparent;
+    height: 50%;
+    outline: none;
+    font-size: 30px;
+    color: #aaa;
+}
+
+.write-tag {
+    // background-color: cornflowerblue;
+    margin-bottom: 80px;
+    font-size: 25px;
+}

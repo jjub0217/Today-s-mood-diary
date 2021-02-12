@@ -11,16 +11,48 @@
         <div class="face-header">오늘 하루는 어떠셧나요?</div>
         <main>
             <div class="face-icons">
-                <img class="face-icon" src = "./images/feeling/angry-regular.png"></img>
-                <img class="face-icon" src="./images/feeling/sad-regular.png"></img>
-                <img class="face-icon" src="./images/feeling/normal-regular.png"></img>
-                <img class="face-icon" src="./images/feeling/good-regular.png"></img>
-                <img class="face-icon" src="./images/feeling/laugh-regular.png"></img>
+                <div class="face-icon">
+                    <label>
+                        <input type="radio" name="face" value="angry" checked>
+                        <img class="far far-angry" src = "./images/feeling/angry-regular.png"></img>
+                        <img class="fas fas-angry" src = "./images/feeling/angry-solid.png" hidden=true></img>
+                    </label>
+                </div>
+                <div class="face-icon">
+                    <label>
+                        <input type="radio" name="face" value="sad">
+                        <img class="far far-sad" src="./images/feeling/sad-regular.png"></img>
+                        <img class="fas fas-sad" src="./images/feeling/sad-solid.png" hidden=true></img>
+                    </label>
+                </div>
+                <div class="face-icon">
+                    <label>
+                        <input type="radio" name="face" value="normal">
+                        <img class="far far-normal" src="./images/feeling/normal-regular.png"></img>
+                        <img class="fas fas-normal" src="./images/feeling/normal-solid.png" hidden=true></img>
+                    </label>
+                </div>
+                <div class="face-icon">
+                    <label>
+                        <input type="radio" name="face" value="good">
+                        <img class="far far-good" src="./images/feeling/good-regular.png"></img>
+                        <img class="fas fas-good" src="./images/feeling/good-solid.png" hidden=true></img>
+                    </label>
+                </div>
+                <div class="face-icon">
+                    <label>
+                        <input type="radio" name="face" value="laugh">
+                        <img class="far far-laugh" src="./images/feeling/laugh-regular.png"></img>
+                        <img class="fas fas-laugh" src="./images/feeling/laugh-solid.png" hidden=true></img>
+                    </label>
+                </div>
             </div>
             <div class="face-button">
-                <a href="./test.html">다음</a>
+                <a href="./detail.html">다음</a>
             </div>
         </main>
     </div>
+    
+    <script src="./face.js"></script>
 </body>
 </html>

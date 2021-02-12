@@ -1,3 +1,13 @@
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + img {
+    outline: 2px solid blueviolet;
+  }
+}
 
 .face-container {
   display: flex;
@@ -17,7 +27,9 @@
 .face-icons {
   display: flex;
   justify-content: space-around;
-  img {
+  .far,
+  .fas {
+    cursor: pointer;
     height: 40px;
   }
 }

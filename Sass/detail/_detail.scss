@@ -36,36 +36,39 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    background-color: #d5d5d3;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
+    // background-color: aqua;
 }
 
 // 헤더
-header {
-    @include flexElement(flex, space-between, center);
-
-    background-color: violet;
-    width: 100%;
-    height: 7%;
-    border-bottom: 1px solid;
+.detail-header {
+    @include flexElement(flex, space-between, flex-start);
+    @include MWH(_, 100%, 25%);
+    padding: 20px 0 0 0 ;
+    background-color: #D5D5D3;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-
+    z-index: 10;
+    font-size: 23px;
+    
     .time {
         @include MP(0 0 0 30px, 15px 0);
-
-        font-size: 23px;
+        // font-size: 23px;
+        // background-color: royalblue;
     }
-
+    
     .header-right {
         @include flexElement(flex, center, center);
+        padding: 20px 0 0 0 ;
         margin-right: 30px;
 
         [alt=weather] {
@@ -93,116 +96,181 @@ header {
 }
 
 
-// 메인
-main {
-    @include flexElement(flex, center, center);
-    flex-direction: column;
-    
-    // ul
-    .board-list {
+// main
+.detail-main {
+    margin: 0 auto;
+    width: 1200px;
+    height: 60%;
+    // height: 100vh;
+    // background-color: chocolate;
+}
+
+// ul
+.board-list {
+    width: 100%;
+    // height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 300px;
+    // background-color: royalblue;
+}
+
+
+// li
+.list {
+    background-color: rgb(250, 249, 249);
+    box-shadow:  10px 60px 100px #000;
+    width: 100%;
+    height: 18em;
+    // height: 60%;
+    list-style: none;
+    position: relative;
+    margin-bottom: 60px;
+
+    &>a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .list-date {
+        background: linear-gradient(135deg, rgba(176,242,183,1) 0%,rgba(100,212,224,1) 100%);
+        width: 15%;
+        height: 100%;
+        text-align: center;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+
+
+        .day {
+            margin: 0;
+            padding-top: 10px;
+            width: 100%;
+            height: 23%;
+            margin-top: 20px;
+        }
         
-        @include MP(80px 0 0 0, 0 30px);
-
-        // ul > a
-        &>a {
-            display: block;
-            text-decoration: none;
-            color: black;
-            margin: 0 30px 30px 30px;
-
-            // li
-            .list {
-                @include flexElement(flex, _, _);
-
-                border: 1px solid;
-                list-style: none;
-
-                // li > date 
-                .list-date {
-                    width: 9%;
-                    font-size: 20px; // 1em : 20px
-                    border-right: 1px solid;
-                    text-align: center;
-
-                    &>.day {
-                        margin: 0;
-                        border-bottom: 1px solid;
-                        background-color: #eee;
-                        text-align: center;
-                        line-height: 2;
-                    }
-                }
-
-                .contents {
-                    @include flexElement(flex, space-between, center);
-                    width: 100%;
-
-                    .text {
-                        margin-left: 40px;
-
-                        // h2
-                        .list-title {
-                            @include MWH(10px 0, 500px, _);
-
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            overflow: hidden;
-                        }
-                    }
-
-                    [alt=feeling] {
-                        @include MWH(0 40px 0 0, 6%, 60%);
-                    }
-
-                }
-            }
-
+        .date {
+            margin: 0;
+            padding-top: 50px;
+            width: 100%;
+            height: 50%;
         }
     }
+
 }
 
 
-.more {
 
-    @include MWH(10px 0 0 0, 160px, 70px);
-    font-size: 18px;
-    border: 1px solid;
-    border-radius: 50%;
-    margin-bottom: 100px;
-    cursor: pointer;
+.contents {
+    display: inline;
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15%;
 }
 
+.text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // background-color: red;
+}
+
+.detail-time {
+    width: 20%;
+    height: 14%;
+    font-size: 1.3rem;
+    display: inline-block;
+    position: absolute;
+    top: 15%;
+    left: 7%;
+}
+
+
+
+.detail-date::before {
+    content: "";
+    display: inline-block;
+    width: 13%;
+    height: 66%;
+    margin-top: -6px;
+    background-image: url('/images/clock-solid.png');
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.list-title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 500px;
+    position: absolute;
+    left: 7%;
+    top: 35%;
+}
+
+.tag{
+    position: absolute;
+    top: 70%;
+    left: 7%;
+}
+
+.feeling-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6%;
+    padding: 20px;
+    transition: transform 300ms ease;
+}
+
+.feeling-icon:hover{
+    transform: scale(1.1);
+}
+.more{
+    margin-top: 100px;
+    background-color: #eee;
+    width: 13%;
+    height: 4em;
+    font-size: 20px;
+    margin-bottom: 60px;
+
+    border: none;
+    // border: 1px solid;
+    border-radius: 30px;
+    // background-color: transparent;
+}
 
 .navigation{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: violet;
-    // margin-top: 1000px;
+    margin: 0 auto;
+    // background-color: blue;
+    // width: 100%;
 }
-// ul
-.nav-list {
+
+.nav-list{
+    // flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
-    padding: 0;
+    text-align: center;
+    // background-color: red;
     margin: 0;
-    width: 100%;
-    // background-color: violet;
-
-    li{
-        // background-color: red;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-
-        .nav-icon{
-            width: 20%;
-            height: 50%;
-            cursor: pointer;
-        }
-    }
+    padding: 0;
+    // width: 100%;
 }
 
 
+
+.nav-list > li {
+    margin: 20px 0;
+    list-style: none;
+    width: 22%;
+    height: 100%;
+
+    & > a >img {
+        width: 20%;
+    }
+}
