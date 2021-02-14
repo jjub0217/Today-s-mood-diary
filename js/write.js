@@ -1,3 +1,6 @@
+
+import {loadedLocalStorage} from './export.js';
+
 const writeTitle = document.querySelector('.writeTitle'); // input 태그
 const createBtn = document.querySelector('.create'); // button 태그
 const closeBtn = document.querySelector('.close'); // button 태그
@@ -16,17 +19,7 @@ const saveTags = [];
 // 일기장 제목
 let contentTitle = [];
 
-
-// 로컬스토리지에 저장된 데이터 불러오는 함수. (데이터가 없으면 빈배열 반환)
-const loadedLocalStorage = () => {
-    const allLocalStorage = JSON.parse(localStorage.getItem('dairy'));
-    if (allLocalStorage === null || allLocalStorage.length === 0) {
-        return [];
-    }
-
-    return allLocalStorage;
-}
-
+// loadedLocalStorage : 로컬스토리지에 저장된 데이터 불러오는 함수. (데이터가 없으면 빈배열 반환)
 // 로컬스토리지 데이터 초기데이터 세팅 
 const result = loadedLocalStorage();
 
@@ -205,6 +198,7 @@ const addDiary = () => {
 
 
 
+// writeTitle.onkeyup = handleTitle();
 writeTitle.addEventListener('keyup', handleTitle);
 tag.addEventListener('click', addTag1);
 createBtn.addEventListener('click', addDiary);

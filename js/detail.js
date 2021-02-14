@@ -1,64 +1,63 @@
-const $h2 = document.querySelector('.list-title');
+// const $h2 = document.querySelector('.list-tit/le');
 const $ul = document.querySelector('.board-list');
 const $time = document.querySelector('.time');
 
 
 function loadHeaderDate() {
-    // let html = '';
-    const loadedHeaderDate = new Date();
-    console.log(loadedHeaderDate);
-    const year = loadedHeaderDate.getFullYear();
-    const month = loadedHeaderDate.getMonth();
-    const date = loadedHeaderDate.getDate();
+  // let html = '';
+  const loadedHeaderDate = new Date();
+  // console.log(loadedHeaderDate);
+  const year = loadedHeaderDate.getFullYear();
+  const month = loadedHeaderDate.getMonth();
+  const date = loadedHeaderDate.getDate();
 
-    if(month <10){
-        $time.innerHTML = `${year} 0${month} ${date}`;
-    }else{
-        $time.innerHTML = `${year} ${month} ${date}`;
-    }
+  if (month < 10) {
+    $time.innerHTML = `${year} 0${month} ${date}`;
+  } else {
+    $time.innerHTML = `${year} ${month} ${date}`;
+  }
 }
 
 loadHeaderDate();
 
 
 
+function loadDairy() {
+  const loadedDairy = localStorage.getItem('dairy');
+  // console.log(loadedDairy);
 
-module.exports = function loadDairy() {
-    const loadedDairy = localStorage.getItem('dairy');
-    console.log(loadedDairy);
+  if (loadedDairy !== null) {
+    // 로컬스토리지에 저장된 데이터
+    const parsedDairy = JSON.parse(loadedDairy);
+    // console.log(parsedDairy);
 
-    if (loadedDairy !== null) {
-        // 로컬스토리지에 저장된 데이터
-        const parsedDairy = JSON.parse(loadedDairy);
-        console.log(parsedDairy);
+    let html = '';
 
-        let html = '';
+    parsedDairy.forEach(dairy => {
 
-        parsedDairy.forEach(dairy => {
+      const id = dairy.id;
+      const title = dairy.title;
+      const tags = dairy.tags;
+      const year = dairy.year;
+      const month = dairy.month;
+      const date = dairy.date;
+      const day = dairy.dayString;
+      const hour = dairy.hour;
+      // console.log(hour);
+      const minute = dairy.minute;
+      // console.log(minute);
 
-            const id = dairy.id;
-            const title = dairy.title;
-            const tags = dairy.tags;
-            const year = dairy.year;
-            const month = dairy.month;
-            const date = dairy.date;
-            const day = dairy.dayString;
-            const hour = dairy.hour;
-            // console.log(hour);
-            const minute = dairy.minute;
-            // console.log(minute);
+      let tagHtml = '';
 
-            let tagHtml = '';
-
-            // console.log(tags); // [# 힘들어, #씻구와]
-            tags.forEach(tag => {
-                tagHtml += ` 
+      // console.log(tags); // [# 힘들어, #씻구와]
+      tags.forEach(tag => {
+        tagHtml += ` 
                 <span>${tag}</span>`
-            })
-            console.log(tagHtml);
+      })
+      // console.log(tagHtml);
 
 
-            html += `
+      html += `
             <li class="list" id=${id}>
           <a href="./contents.html">
 
@@ -89,10 +88,10 @@ module.exports = function loadDairy() {
           </a>
         </li>
             `
-        });
+    });
 
-        $ul.innerHTML = html;
-    }
+    $ul.innerHTML = html;
+  }
 }
 
 loadDairy();
