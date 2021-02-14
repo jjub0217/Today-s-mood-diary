@@ -1,6 +1,3 @@
-// export {contentTitle}
 
-
-// let contentTitle = document.querySelector('.contentTitle');
-
-
+const  loadDairy = require('./detail.js');
+console.log(loadDairy());
