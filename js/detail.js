@@ -23,7 +23,7 @@ loadHeaderDate();
 
 
 
-function loadDairy() {
+module.exports = function loadDairy() {
     const loadedDairy = localStorage.getItem('dairy');
     console.log(loadedDairy);
 
@@ -36,6 +36,7 @@ function loadDairy() {
 
         parsedDairy.forEach(dairy => {
 
+            const id = dairy.id;
             const title = dairy.title;
             const tags = dairy.tags;
             const year = dairy.year;
@@ -58,7 +59,7 @@ function loadDairy() {
 
 
             html += `
-            <li class="list">
+            <li class="list" id=${id}>
           <a href="./contents.html">
 
             <div class="list-date">
@@ -95,3 +96,6 @@ function loadDairy() {
 }
 
 loadDairy();
+
+
+// module.exports = loadDairy;
