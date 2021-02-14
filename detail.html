@@ -1,117 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/detail.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detail</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/detail.js" defer></script>
-</head>
-
-<body>
-  <div class="container">
-
-    <header class="detail-header write-header">
-
-
-      <div class="time">
-        <span class="year">2020</span>
-        <span class="month">07</span>
-        <span class="date">06</span>
-      </div>
-
-      <!-- <h1>LIST</h1> -->
-
-      <div class="header-right">
-
-        <img src="./images/weather/cloudy.png" alt="weather" class="icon" />
-
-        <div class="filter">
-          <img src="./images/search.png" alt="search" class="icon" />
-          <select name="조건 검색" class="select-option">
-            <option value="title">제목</option>
-            <option value="contents">내용</option>
-            <option value="feeling">기분</option>
-            <option value="tag">태그</option>
-          </select>
-          <input type="text" class="search">
+  <body>
+    <div class="container">
+      <header class="detail-header write-header">
+        <div class="time">
+          <!-- <span class="time-now"></span> -->
+          <!-- <span class="month">07</span>
+          <span class="date">06</span> -->
         </div>
 
+        <!-- <h1>LIST</h1> -->
+
+        <div class="header-right">
+          <img src="./images/weather/cloudy.png" alt="weather" class="icon" />
+
+          <div class="filter">
+            <select name="조건 검색" class="select-option">
+              <option value="title">제목</option>
+              <option value="contents">내용</option>
+              <option value="feeling">기분</option>
+              <option value="tag">태그</option>
+            </select>
+            <input type="text" class="search" />
+            <img src="./images/search.png" alt="search" class="icon" />
+          </div>
+        </div>
+      </header>
+
+      <main class="detail-main">
+        <ul class="board-list"></ul>
+      </main>
+      <button class="more">더보기</button>
+
+      <div class="navigation">
+        <h2 class="a11y-hidden">메인메뉴</h2>
+        <ul class="nav-list">
+          <li>
+            <a href="./detail.html">
+              <img
+                src="./images/list-alt-regular.png"
+                alt="lists"
+                class="nav-icon"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="./write.html">
+              <img
+                src="./images/edit-regular.png"
+                alt="write"
+                class="nav-icon"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="./calendar.html">
+              <img
+                src="./images/feeling/good-regular.png"
+                alt="feeling-calendar"
+                class="nav-icon"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="./images/corperation-info-regular.png"
+                alt="info"
+                class="nav-icon"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
-
-    </header>
-
-    <main class="detail-main">
-      <ul class="board-list">
-        <li class="list">
-          <a href="./contents.html">
-
-            <div class="list-date">
-              <span class="day">sun</span>
-              <span class="date">11</span>
-            </div>
-
-
-            <div class="contents">
-
-              <div class="text">
-                <div class="detail-time">
-                  <span class="detail-date">4: 45 PM</span>
-                </div>
-
-                <h2 class="list-title">마우스를
-                  샀다.
-                </h2>
-
-                <div class="tag">
-                  <span># 좋은</span>
-                  <span># 신상</span>
-                </div>
-              </div>
-
-              <img src="./images/feeling/good-regular.png" alt="feeling" class="icon feeling-icon" />
-
-            </div>
-
-          </a>
-        </li>
-             </ul>
-    </main>
-    <button class="more">더보기</button>
-
-
-    <div class="navigation">
-      <h2 class="a11y-hidden">메인메뉴</h2>
-      <ul class="nav-list">
-
-        <li>
-
-          <a href="./detail.html">
-            <img src="./images/list-alt-regular.png" alt="lists" class="nav-icon" />
-          </a>
-        </li>
-
-        <li>
-          <a href="./write.html">
-            <img src="./images/edit-regular.png" alt="write" class="nav-icon" />
-          </a>
-        </li>
-
-        <li>
-          <a href="./calendar.html">
-            <img src="./images/feeling/good-regular.png" alt="feeling-calendar" class="nav-icon" />
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="./images/corperation-info-regular.png" alt="info" class="nav-icon" />
-          </a>
-        </li>
-      </ul>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
