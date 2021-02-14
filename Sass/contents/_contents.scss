@@ -34,16 +34,18 @@
             @include flexElement(flex, center, center);
 
             [alt=search] {
-                @include MWH(0 7px 0 30px, 20px, _);
+                @include MWH(0 7px 0 10px, 20px, _);
             }
 
             .select-option {
-                @include MP(0 10px 0 0, 3px);
+                @include MP(0 10px 0 10px, 3px);
                 font-size: 16px;
             }
 
             .search {
                 padding: 4px;
+                outline: none;
+
             }
         }
 

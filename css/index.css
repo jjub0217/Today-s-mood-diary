@@ -86,26 +86,28 @@
           align-items: center;
 }
 
-.detail-header .header-right .filter [alt=search] {
-  margin: 0 7px 0 30px;
-  width: 20px;
-  height: _;
-}
-
 .detail-header .header-right .filter .select-option {
-  margin: 0 10px 0 0;
+  margin: 0 10px 0 10px;
   padding: 3px;
   font-size: 16px;
 }
 
 .detail-header .header-right .filter .search {
   padding: 4px;
+  outline: none;
+}
+
+.detail-header .header-right .filter [alt=search] {
+  margin: 0 7px 0 10px;
+  width: 20px;
+  height: _;
 }
 
 .detail-main {
   margin: 0 auto;
   width: 1200px;
   height: 60%;
+  background-color: chocolate;
 }
 
 .board-list {
@@ -192,7 +194,7 @@
   width: 13%;
   height: 66%;
   margin-top: -6px;
-  background-image: url("/images/clock-solid.png");
+  background-image: url("../images/clock-solid.png");
   background-size: contain;
   vertical-align: middle;
   margin-right: 15px;
@@ -238,7 +240,9 @@
   height: 4em;
   font-size: 20px;
   margin-bottom: 60px;
+  outline: none;
   border: none;
+  cursor: pointer;
   border-radius: 30px;
 }
 
@@ -333,19 +337,20 @@
 }
 
 .write-header .header-right .filter [alt=search] {
-  margin: 0 7px 0 30px;
+  margin: 0 7px 0 10px;
   width: 20px;
   height: _;
 }
 
 .write-header .header-right .filter .select-option {
-  margin: 0 10px 0 0;
+  margin: 0 10px 0 10px;
   padding: 3px;
   font-size: 16px;
 }
 
 .write-header .header-right .filter .search {
   padding: 4px;
+  outline: none;
 }
 
 .content-main {
@@ -512,19 +517,20 @@
 }
 
 .write-header .header-right .filter [alt=search] {
-  margin: 0 7px 0 30px;
+  margin: 0 7px 0 10px;
   width: 20px;
   height: _;
 }
 
 .write-header .header-right .filter .select-option {
-  margin: 0 10px 0 0;
+  margin: 0 10px 0 10px;
   padding: 3px;
   font-size: 16px;
 }
 
 .write-header .header-right .filter .search {
   padding: 4px;
+  outline: none;
 }
 
 .write-main {
@@ -565,11 +571,19 @@
   margin-bottom: 40px;
 }
 
+.write-btn a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 2em;
+}
+
 .write-btn button {
   border: none;
   color: #aaa;
   background-color: transparent;
   font-size: 2em;
+  cursor: pointer;
+  outline: none;
 }
 
 .write-title {
@@ -596,11 +610,27 @@
   outline: none;
   font-size: 30px;
   color: #aaa;
+  line-height: 2;
 }
 
 .write-tag {
   margin-bottom: 80px;
-  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.write-tag input {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 300px;
+  background-color: transparent;
+  margin-right: 5px;
+  color: #707070;
 }
 
 body {

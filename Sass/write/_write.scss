@@ -1,8 +1,6 @@
-
-
 .write-container {
 
-    background: linear-gradient( #d5d5d3 50%, rgba(176, 242, 183, 1) 0%, rgba(100, 212, 224, 1) 100% 50%);
+    background: linear-gradient(#d5d5d3 50%, rgba(176, 242, 183, 1) 0%, rgba(100, 212, 224, 1) 100% 50%);
 }
 
 
@@ -33,16 +31,18 @@
             @include flexElement(flex, center, center);
 
             [alt=search] {
-                @include MWH(0 7px 0 30px, 20px, _);
+                @include MWH(0 7px 0 10px, 20px, _);
             }
 
             .select-option {
-                @include MP(0 10px 0 0, 3px);
+                @include MP(0 10px 0 10px, 3px);
                 font-size: 16px;
             }
 
             .search {
                 padding: 4px;
+                outline: none;
+
             }
         }
 
@@ -74,12 +74,21 @@
     justify-content: space-between;
     margin-top: 60px;
     margin-bottom: 40px;
+    
+    a{
+        text-decoration: none;
+        color: #aaa;
+        font-size: 2em;
+
+    }
 
     button {
         border: none;
         color: #aaa;
         background-color: transparent;
         font-size: 2em;
+        cursor: pointer;
+        outline: none;
 
     }
 
@@ -112,10 +121,22 @@
     outline: none;
     font-size: 30px;
     color: #aaa;
+    line-height: 2;
 }
 
 .write-tag {
     // background-color: cornflowerblue;
     margin-bottom: 80px;
-    font-size: 25px;
+    display: flex;
+    align-items: center;
+
+    input {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        width: 300px;
+        background-color: transparent;
+        margin-right: 5px;
+        color: rgb(112, 112, 112);
+    }
 }
