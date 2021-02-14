@@ -4,10 +4,19 @@ const faceKey = 'face';
 
 let saved = [];
 
+function deleteDuplicateData(created) {
+    const founded = selectAllFaceInfo();
+    founded.forEach(found => {
+        if (found.created === created) {
+            founded.remove(found);
+        }
+    });
+}
+
 function saveFaceInfo(face) {
     const faceId = face.id;
-    const created = getTime();
-    // const created = '2021-02-14';
+    // const created = getTime();
+    const created = '2021-02-12';
     // json에 저장 시킨다. 날자. 감정정보
     const faceInfo = {
         id: faceId,
@@ -15,6 +24,7 @@ function saveFaceInfo(face) {
     };
     
     saved = selectAllFaceInfo();
+    deleteDuplicateData(faceInfo.created);
     saved.push(faceInfo);
 
     // localStorage 읽고, 거기에 push해서 저장
