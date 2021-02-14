@@ -1,31 +1,23 @@
 const faces = document.querySelectorAll('input[type="radio"]');
 const faceArray = [...faces];
-let result = new Map();
-let resultArr = [];
+const faceKey = 'face';
+
+const saved = selectAllFaceInfo();
 
 function saveFaceInfo(face) {
     const faceId = face.id;
-    // const created = getTime();
-    const created = '2021-02-14';
+    const created = getTime();
+    // const created = '2021-02-14';
     // json에 저장 시킨다. 날자. 감정정보
     const faceInfo = {
         id: faceId,
         created: created
     };
     
-    result.set(created, faceInfo);
-    
-    if (resultArr.length === 0) {
-        resultArr.push(result.get(created));
-        localStorage.setItem(`face`, JSON.stringify(resultArr));
-        return ;
-    }
-    for (r of resultArr) {
-        console.log(r);
-        resultArr.push(result.get(created));
-        localStorage.setItem(`face`, JSON.stringify(resultArr));
-    }
-    
+    saved.push(faceInfo);
+
+    // localStorage 읽고, 거기에 push해서 저장
+    localStorage.setItem(faceKey, JSON.stringify(saved));
 }
 
 function getTime() {
@@ -39,6 +31,12 @@ function getTime() {
 
 function setEventListener() {
     faceArray.forEach(arr => arr.addEventListener('click', () => saveFaceInfo(arr)));
+}
+
+function selectAllFaceInfo() {
+    const founded = JSON.parse(localStorage.getItem(faceKey));
+    console.dir(founded);
+    return founded;
 }
 
 setEventListener();
