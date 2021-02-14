@@ -2,7 +2,7 @@ const faces = document.querySelectorAll('input[type="radio"]');
 const faceArray = [...faces];
 const faceKey = 'face';
 
-const saved = selectAllFaceInfo();
+let saved = [];
 
 function saveFaceInfo(face) {
     const faceId = face.id;
@@ -14,6 +14,7 @@ function saveFaceInfo(face) {
         created: created
     };
     
+    saved = selectAllFaceInfo();
     saved.push(faceInfo);
 
     // localStorage 읽고, 거기에 push해서 저장
@@ -35,7 +36,9 @@ function setEventListener() {
 
 function selectAllFaceInfo() {
     const founded = JSON.parse(localStorage.getItem(faceKey));
-    console.dir(founded);
+    if (founded === null){
+        return [];
+    }
     return founded;
 }
 
