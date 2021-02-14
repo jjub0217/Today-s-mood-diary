@@ -15,8 +15,8 @@ function deleteDuplicateData(created) {
 
 function saveFaceInfo(face) {
     const faceId = face.id;
-    // const created = getTime();
-    const created = '2021-02-12';
+    const created = getTime();
+
     // json에 저장 시킨다. 날자. 감정정보
     const faceInfo = {
         id: faceId,
