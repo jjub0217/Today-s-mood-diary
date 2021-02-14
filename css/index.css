@@ -398,7 +398,7 @@
 
 .contents-day::after,
 .contents-date::after {
-  content: " / ";
+  content: "/";
 }
 
 .contents-icon {
@@ -443,7 +443,6 @@
       -ms-flex-align: center;
           align-items: center;
   width: 60%;
-  margin-top: 3em;
 }
 
 .content-btn button {

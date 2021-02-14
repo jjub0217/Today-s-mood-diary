@@ -194,6 +194,8 @@ const addDiary = () => {
     if (checkEmptyText()) {
         localStorage.setItem('dairy', JSON.stringify(result));
     }
+
+    location.href = './detail.html'
 }
 
 
