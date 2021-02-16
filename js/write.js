@@ -1,5 +1,5 @@
 
-import {loadedLocalStorage} from './export.js';
+import {loadedLocalStorage, addDiary} from './export.js';
 
 const writeTitle = document.querySelector('.writeTitle'); // input 태그
 const createBtn = document.querySelector('.create'); // button 태그
@@ -122,85 +122,84 @@ const checkLength = () => {
 
 
 // 일기 내용 작성 이벤트
-const addDiary = () => {
+// const addDiary = () => {
 
 
 
-    const arrLength = checkLength();
-    const id = arrLength + 1;
+//     const arrLength = checkLength();
+//     const id = arrLength + 1;
 
-    const title = writeTitle.value;
-    const content = textarea.value;
+//     const title = writeTitle.value;
+//     const content = textarea.value;
 
-    const tags = saveTags;
+//     const tags = saveTags;
 
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const date = today.getDate();
-    const day = today.getDay();
-    const hour = today.getHours();
-    const minute = today.getMinutes();
-
-
-    let dayString = '';
+//     const today = new Date();
+//     const year = today.getFullYear();
+//     const month = today.getMonth() + 1;
+//     const date = today.getDate();
+//     const day = today.getDay();
+//     const hour = today.getHours();
+//     const minute = today.getMinutes();
 
 
-
-    switch (day) // switch 문에 우리가 확인하고 싶은 값을 넣는다. 
-    { // 그다음에는 case 를 하나하나 정해줄거다.
-        case 0:
-            dayString = 'Sun';
-            break; // 어~ 비교하는거 이제 끝났어~!
-        case 1:
-            dayString = 'Mon'
-            break;
-        case 2:
-            dayString = 'Tue'
-            break;
-        case 3:
-            dayString = 'Wed'
-            break;
-        case 4:
-            dayString = 'Thu'
-            break;
-        case 5:
-            dayString = 'Fri'
-            break;
-        case 6:
-            dayString = 'Sat'
-            break;
-        default: // 아무것도 일치 하지 않았을 경우 실행할 코드를 콜론 뒤에 넣는다. 
-    }
+//     let dayString = '';
 
 
 
-    const dairyInfo = {
-        id,
-        title,
-        content,
-        tags,
-        year,
-        month,
-        date,
-        dayString,
-        hour,
-        minute
+//     switch (day) // switch 문에 우리가 확인하고 싶은 값을 넣는다. 
+//     { // 그다음에는 case 를 하나하나 정해줄거다.
+//         case 0:
+//             dayString = 'Sun';
+//             break; // 어~ 비교하는거 이제 끝났어~!
+//         case 1:
+//             dayString = 'Mon'
+//             break;
+//         case 2:
+//             dayString = 'Tue'
+//             break;
+//         case 3:
+//             dayString = 'Wed'
+//             break;
+//         case 4:
+//             dayString = 'Thu'
+//             break;
+//         case 5:
+//             dayString = 'Fri'
+//             break;
+//         case 6:
+//             dayString = 'Sat'
+//             break;
+//         default: // 아무것도 일치 하지 않았을 경우 실행할 코드를 콜론 뒤에 넣는다. 
+//     }
 
-    }
-
-    result.push(dairyInfo);
-
-    if (checkEmptyText()) {
-        localStorage.setItem('dairy', JSON.stringify(result));
-    }
-
-    location.href = './detail.html'
-}
 
 
+//     const dairyInfo = {
+//         id,
+//         title,
+//         content,
+//         tags,
+//         year,
+//         month,
+//         date,
+//         dayString,
+//         hour,
+//         minute
 
-// writeTitle.onkeyup = handleTitle();
+//     }
+
+//     result.push(dairyInfo);
+
+//     if (checkEmptyText()) {
+//         localStorage.setItem('dairy', JSON.stringify(result));
+//     }
+
+//     location.href = './detail.html'
+// }
+
+
+
 writeTitle.addEventListener('keyup', handleTitle);
 tag.addEventListener('click', addTag1);
 createBtn.addEventListener('click', addDiary);
