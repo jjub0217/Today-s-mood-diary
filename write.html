@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script type ="module" src="./js/write.js" defer></script>
+    <script src="./js/weather.js" defer></script>
   </head>
 
   <body>
@@ -24,7 +25,7 @@
           <img src="./images/weather/cloudy.png" alt="weather" class="icon" />
 
           <div class="filter">
-            <img src="./images/search.png" alt="search" class="icon" />
+            <!-- <p class="coords"></p> -->
             <select name="조건 검색" class="select-option">
               <option value="title">제목</option>
               <option value="contents">내용</option>
@@ -32,6 +33,7 @@
               <option value="tag">태그</option>
             </select>
             <input type="text" class="search" />
+            <img src="./images/search.png" alt="search" class="icon" />
           </div>
         </div>
       </header>
@@ -79,19 +81,19 @@
   
           <li>
   
-            <a href="">
+            <a href="./detail.html">
               <img src="./images/list-alt-regular.png" alt="lists" class="nav-icon" />
             </a>
           </li>
   
           <li>
-            <a href="">
+            <a href="./write.html">
               <img src="./images/edit-regular.png" alt="write" class="nav-icon" />
             </a>
           </li>
   
           <li>
-            <a href="">
+            <a href="./calendar.html">
               <img src="./images/feeling/good-regular.png" alt="feeling-calendar" class="nav-icon" />
             </a>
           </li>
@@ -105,5 +107,7 @@
       </div>
   
     </div>
+
+
   </body>
 </html>
