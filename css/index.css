@@ -453,6 +453,7 @@
   color: #424141;
   border: none;
   border-radius: 25px;
+  outline: none;
 }
 
 .write-container {
