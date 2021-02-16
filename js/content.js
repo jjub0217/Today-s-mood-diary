@@ -1,18 +1,19 @@
-import {
-    loadedLocalStorage
-} from './export.js';
+import {loadedLocalStorage, saveData, addDiary } from './export.js';
+// import { addDiary } from './write.js';
 
-
+const $content = document.querySelector('.content')
 const $contentTime = document.querySelector('.contents-time_feeling');
 const $contentTitle = document.querySelector('.contentTitle'); 
-const $content = document.querySelector('.dairy-inner');
+const $dairy = document.querySelector('.dairy-inner');
 const $tags = document.querySelector('.inputTag');
+const $modify = document.querySelector('.modify');
+const $delete = document.querySelector('.delete');
+
+let datas = loadedLocalStorage();
 
 
-
+// 작성한 일기 랜더 하는 함수
 function callDatas() {
-    const datas = loadedLocalStorage();
-    console.log(datas);
 
     let timeHtml = '';
     let titleHtml  = '';
@@ -20,6 +21,8 @@ function callDatas() {
     let tagHtml = '';
 
     datas.forEach(data => {
+
+        $content.setAttribute('id', data.id);
 
         timeHtml += `
         <span class="day contents-day">${data.dayString} </span>
@@ -42,7 +45,44 @@ function callDatas() {
 
     $contentTime.innerHTML = timeHtml;
     $contentTitle.value = titleHtml;
-    $content.innerHTML = contentHtml;
+    $dairy.innerHTML = contentHtml;
 
 }
 callDatas();
+
+
+
+// 작성한 일기 삭제하는 함수
+const deleted = (e) => {
+    console.log(e); // MouseEvent
+    console.log(e.target); // button
+
+    // const dairyId = e.target.parentNode; // content-btn
+    const dairyId = e.target.parentNode.previousElementSibling.id; // 2
+    console.log(dairyId);
+    console.log(typeof dairyId); // string
+    console.log(typeof +dairyId); // number
+
+    datas = datas.filter(data => data.id !== +dairyId);
+    console.log(datas);
+    
+    
+    saveData();
+    location.href = './detail.html';
+
+}
+
+
+
+// const modified = () =>{
+//     location.href = './write.html';
+//     addDiary();
+
+// }
+
+
+// 작성한 일기 삭제하는 이벤트
+$delete.addEventListener('click', deleted);
+
+// 작성한 일기 수정하는 이벤튼
+$modify.addEventListener('click', modified)
